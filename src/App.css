@@ -1,0 +1,134 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 auto 2em;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7em;
+  width: fit-content;
+  max-width: 380px;
+
+  label {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  input {
+    padding: 0.7em;
+    font-size: 1em;
+    border: 1px solid #A3A1FF;
+    border-radius: 8px;
+    max-width: 114px;
+  }
+
+  .range {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    label {
+      flex-direction: row;
+      gap: 0.5em;
+      align-items: center;
+      width: auto;
+    }
+  }
+
+  .checkboxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 38px;
+    width: 100%;
+
+    .checkbox {
+      position: relative;
+      width: 100%;
+    }
+
+    .checkbox input {
+      display: none;
+    }
+
+    .checkbox input+label {
+      border: 1px solid #A3A1FF;
+      border-radius: 8px;
+      padding: 0.3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      height: 100%;
+      cursor: pointer;
+      transition: background-color 0.25s;
+      font-size: medium;
+    }
+
+    .checkbox label:hover {
+      background-color: #a2a1ff25;
+    }
+
+    .checkbox input:checked+label {
+      background-color: #A3A1FF;
+      color: white;
+    }
+
+    .checkbox label::before {
+      content: "";
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
+      border: 2px solid #A3A1FF;
+      border-radius: 3px;
+      background-color: transparent;
+      margin-right: 0.5em;
+      transition: background-color 0.25s;
+    }
+
+    .checkbox input:checked+label::before {
+      background-color: white;
+    }
+
+    .checkbox input:checked+label::after {
+      content: "✔";
+      display: block;
+      position: absolute;
+      left: 0.4em;
+      top: 0.2em;
+      color: #A3A1FF;
+      font-size: 1em;
+    }
+  }
+}
+
+.results {
+  h3 {
+    margin: 0;
+    color: #646cffc8;
+  }
+}
