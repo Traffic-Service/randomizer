@@ -25,6 +25,10 @@ function App() {
     setResults(numbers);
   };
 
+  const onCopy = (text) => {
+    navigator.clipboard.writeText(text);
+  };
+
   return (
     <React.Fragment>
       <div>
@@ -96,12 +100,12 @@ function App() {
       </div>
 
       {results.length !== 0 && (
-        <div className="card">
+        <div className="card result">
           <div className="results">
             <h3>Результат:</h3>
             <h2>{results.join(', ')}</h2>
           </div>
-          <button>Скопировать</button>
+          <button onClick={onCopy(results.join(', '))}>Скопировать</button>
         </div>
       )}
     </React.Fragment>
