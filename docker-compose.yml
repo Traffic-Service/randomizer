@@ -10,7 +10,7 @@ services:
       - '3000:3000'
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.randomizer.rule=Host(`plus-link.ru`)"
+      - "traefik.http.routers.randomizer.rule=Host(`24random.ru`)"
       - "traefik.http.routers.randomizer.entrypoints=https"
       - "traefik.http.services.randomizer.loadbalancer.server.port=3000"
     volumes:
