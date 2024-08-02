@@ -75,6 +75,7 @@ function App() {
                   checked={allowDuplicates}
                   onChange={(e) => setAllowDuplicates(e.target.checked)}
                 />
+                <span className={`icon ${allowDuplicates ? 'checked' : ''}`} />
                 Повторы
               </label>
             </div>
@@ -86,6 +87,7 @@ function App() {
                   checked={sorted}
                   onChange={(e) => setSorted(e.target.checked)}
                 />
+                <span className={`icon ${sorted ? 'checked' : ''}`} />
                 Сортировать
               </label>
             </div>
