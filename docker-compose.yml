@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  randomizer:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - '3000:3000'
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.randomizer.rule=Host(`24random.ru`)"
+      - "traefik.http.routers.randomizer.entrypoints=https"
+      - "traefik.http.services.randomizer.loadbalancer.server.port=3000"
+    volumes:
+      - node_mt:/app/node_modules
+    networks:
+      - traefik-proxy
+
+
+networks:
+  traefik-proxy:
+    name: traefik-proxy
+    external: true
+
+volumes:
+  node_mt:
