@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import viteLogo from '/cube-of-numbers.png';
+import viteLogo from '/logo.png';
 import './App.css';
 
 function App() {
